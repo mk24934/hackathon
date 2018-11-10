@@ -6,8 +6,9 @@ https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-g
 and
 https://ethereum.stackexchange.com/questions/58093/difference-between-ganache-and-truffle
 
-tldr: When trying to deploy to the blockchain
+In short, when trying to deploy to the blockchain do the following:
 
+  0) check truffle.js file, change port to number found in Ganache (settings)
   1) make sure terminal is in the correct working directory
   2) truffle migrate --reset
   3) npm start
