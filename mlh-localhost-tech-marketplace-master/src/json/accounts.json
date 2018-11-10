@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Jane Coder",
+    "provider": "http://localhost:22000",
+    "key": "BULeR8JyUWhiuuCMU/HLA0Q5pzkYT+cHII3ZKBey3Bo="
+  },
+  {
+    "name": "C.J. Sharp",
+    "provider": "http://localhost:22001",
+    "key": "QfeDAys9MPDs2XHExtc84jKGHxZg/aj52DTh0vtA3Xc="
+  },
+  {
+    "name": "Sue Bash",
+    "provider": "http://localhost:22002",
+    "key": "1iTZde/ndBHvzhcl7V68x44Vx7pl8nwx9LqnM/AfJUg="
+  }
+]
