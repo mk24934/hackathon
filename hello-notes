@@ -1,0 +1,58 @@
+Notes on creating a DAPP
+From:
+http://www.dappuniversity.com/articles/the-ultimate-ethereum-dapp-tutorial#dependencies
+and
+https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269
+and
+https://ethereum.stackexchange.com/questions/58093/difference-between-ganache-and-truffle
+
+tldr: When trying to deploy to the blockchain
+
+  1) make sure terminal is in the correct working directory
+  2) truffle migrate --reset
+  3) npm start
+
+----- More notes
+0) Install:
+  npm install -g truffle
+  npm install -g ganache-cli
+
+1) Setting up the blockchain
+    Open Ganache
+
+2) Truffle
+  # truffle develop # not needed
+  truffle compile
+      Compile will compile our Solidity code to bytecode
+      (the code that the Ethereum Virtual Machine (EVM) understands),
+      in our case, Ganache emulates the EVM.
+
+  truffle migrate --network development
+      Migrate will deploy the code to the blockchain,
+      in our case, the blockchain could be found in the network
+      “development” we set earlier in the “truffle-config.js” file.
+
+  # truffle console
+  # Election.deployed().then(function(instance) { app = instance })
+  # app.address
+  # app.candidate()
+
+3)
+  After editing solidity code to recompile use
+  truffle migrate --reset
+  truffle console
+
+
+8) Notes on connecting Metamask to Ganache
+https://www.codementor.io/swader/developing-for-ethereum-getting-started-with-ganache-l6abwh62j
+    i) highlight and copy the HTTP server in Ganache
+    ii) paste into a custom RPC (icon at top of Metamask extension)
+    iii) Import account from ganache, by copying the private key
+
+9) Other notes:
+  Ganache Mnemonic
+  candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
+
+  - to change the default browser, say from safari to chrome
+    in the "bs-config.json" package add the following line:
+        "browser": "google chrome",
