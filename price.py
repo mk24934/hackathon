@@ -12,12 +12,13 @@ import warnings
 from scipy import stats
 warnings.filterwarnings("ignore")
 import re
+import time
 import os
 
 # abspath = os.path.abspath(__file__)
 # dname = os.path.dirname(abspath)
 # os.chdir(dname)
-os.chdir('/Users/jeremylongfellow/Documents')
+os.chdir('/Users/jeremylongfellow/Documents/Github/hackathon/mlh-localhost-tech-marketplace-master/src/json')
 # os.getcwd()
 
 def getDataBatch(tickers, startdate, enddate):
@@ -60,17 +61,17 @@ while True:
             K_values.append(K)
             call.append(c)
             put.append(p)
-        final_T = pd.DataFrame(np.repeat(x, 20), columns = ['Ticker'])
-        final_K = pd.DataFrame(K_values, columns = ['K'])
-        final_C = pd.DataFrame(call, columns = ['Call'])
-        final_P = pd.DataFrame(put, columns = ['Put'])
+        final_T = pd.DataFrame(np.repeat(x, 20), columns = ['name'])
+        final_K = pd.DataFrame(K_values, columns = ['strike'])
+        final_C = pd.DataFrame(call, columns = ['callprice'])
+        final_P = pd.DataFrame(put, columns = ['putprice'])
         temp_df = pd.concat([final_T, final_K, final_C, final_P], axis = 1)
         final_df = pd.concat([final_df, temp_df], axis = 0)
 
     pd.DataFrame.to_json(final_df, orient = 'table', index = False)
     json = final_df.to_json(orient = 'table', index = False)
     json_revised = json.split('data":')[1]
-    json_file = open("prices.json", "w")
+    json_file = open("items.json", "w")
     json_file.write(json_revised[:-1])
     json_file.close()
-time.sleep(300)
+    time.sleep(300)

@@ -20,13 +20,13 @@ contract Market {
     balances[nodeC] = 10 ether;
   }
 
-  function getBalance(address node) public view returns (uint256){
+  function getBalance(address node) public view returns (uint256) {
     return balances[node];
   }
 
   function createItem(string _name, string _image, uint256 _strike, uint256 _callprice) public {
     address _owner;
-    Item memory _item = Item(_owner, _name, _image, _strike, _callprice, "" );
+    Item memory _item = Item(_owner, _name, _image, _strike, _callprice, "");
     items.push(_item);
   }
 
