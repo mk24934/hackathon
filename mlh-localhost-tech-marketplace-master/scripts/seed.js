@@ -16,6 +16,11 @@ const getItems = async function() {
 
 iconMap = new Map();
 iconMap.set('GOOGL', 'images/items/google.jpg');
+iconMap.set('AMZN', 'images/items/amazon.jpg');
+iconMap.set('FB', 'images/items/facebook.jpg');
+iconMap.set('MNST', 'images/items/monster.jpg');
+iconMap.set('BIIB', 'images/items/biogen.jpg');
+iconMap.set('^GSPC', 'images/items/sp500.jpg');
 
 const createItems = async function() {
   return Promise.all(
