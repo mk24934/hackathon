@@ -101,15 +101,17 @@ App = {
    * Updates HTML card element with data for marketplace item
    */
   fillElement: function(data, element) {
-    var ether = Number(web3.fromWei(data[4])).toFixed(2);
+    var strike = Number(web3.fromWei(data[4])).toFixed(2);
+    var ether = Number(web3.fromWei(data[5])).toFixed(2);
     var isOwned = data[1] !== "0x0000000000000000000000000000000000000000";
-    var nickname = data[5].length > 0 ? `"${data[5]}"` : "";
+    var nickname = data[6].length > 0 ? `"${data[6]}"` : "";
 
     element.find(".btn-buy").toggle(data[1] !== App.account.hash);
     element.find(".btn-buy").toggleClass("disabled", isOwned);
     element.find(".btn-sell").toggle(data[1] === App.account.hash);
     element.find(".card-item-name").text(data[2]);
     element.find(".card-img-top").attr("src", data[3]);
+    element.find(".card-strike-amount").text(strike);
     element.find(".card-price-amount").text(ether);
     element.find(".card-item-nickname").text(nickname);
 

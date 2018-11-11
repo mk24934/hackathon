@@ -43,10 +43,10 @@ contract Market {
 
   function sellItem(uint id) public returns (uint) {
     require(id >= 0 && id <= items.length);
+    require(msg.sender == items[id].owner);
 
-
-
-
+    balances[msg.sender] += items[id].price;
+    delete items[id].owner;
 
     return id;
   }
