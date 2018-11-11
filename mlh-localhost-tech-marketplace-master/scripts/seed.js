@@ -14,10 +14,18 @@ const getItems = async function() {
   }
 };
 
+iconMap = new Map();
+iconMap.set('GOOGL', 'images/items/google.jpg');
+iconMap.set('AMZN', 'images/items/amazon.jpg');
+iconMap.set('FB', 'images/items/facebook.jpg');
+iconMap.set('MNST', 'images/items/monster.jpg');
+iconMap.set('BIIB', 'images/items/biogen.jpg');
+iconMap.set('^GSPC', 'images/items/sp500.jpg');
+
 const createItems = async function() {
   return Promise.all(
     data.map(async item => {
-      return await this.createItem(item.name, item.image, item.strike, item.callprice, {
+      return await this.createItem(item.name, iconMap.get(item.name), item.strike, item.callprice, {
         privateFor: [
           "QfeDAys9MPDs2XHExtc84jKGHxZg/aj52DTh0vtA3Xc=",
           "1iTZde/ndBHvzhcl7V68x44Vx7pl8nwx9LqnM/AfJUg=",
