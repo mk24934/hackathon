@@ -7,7 +7,7 @@ Written by: Weini Chen, Jeremy Longfellow, Mark McAvoy, Yiyao Zhou
 
 ## Our project:
 
-  We modify the MLH: Localhost Marketplace DAPP written on JPMorgan's Quorum Blockchain.  We allow the user to buy and sell Black-Scholes call-priced derivatives over the DAPP Marketplace, using Google (GOOGL), Amazon (AMZN), Facebook (FB), Monster (MNST), Biogen Inc (BIIB), and the S&P500 (^GSPC), as the underlying asset.  In our price.py we import this Stock data from Yahoo Finance, the call price is calculated using Black-Scholes option pricing and written to a JSON file every 300seconds. This file is to be read in the marketplace reposity when compiled using truffle as the blockchain interperater.  To see this you must create and run your own blockchain too!  Here's how~
+  We modify the MLH: Localhost Marketplace DAPP written on JPMorgan's Quorum Blockchain.  We allow the user to buy and sell Black-Scholes call-priced derivatives over the DAPP Marketplace, using Google (GOOGL), Amazon (AMZN), Facebook (FB), Monster (MNST), Biogen Inc (BIIB), and the S&P500 (^GSPC), as the underlying asset.  In our price.py we import this Stock data from Yahoo Finance, the call price is calculated using Black-Scholes option pricing and written to a JSON file every 300seconds. This file is to be read in the marketplace reposity when compiled using truffle as the blockchain interperater.  On the webpage, the first number is the strike price and the second number is the call price, each underlying asset is priced at various strikes.  To see this you must create and run your own blockchain too!  Here's how~
  
 ## How to start your own Quorum-Blockchain
 
