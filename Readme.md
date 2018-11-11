@@ -41,4 +41,4 @@ If you get the error the blockchain isn't running, even though it clearly is, re
 
 > docker container ls
  
-> docker rm -f <container-name>
+> docker rm -f \<container-name\>
