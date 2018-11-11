@@ -101,8 +101,8 @@ App = {
    * Updates HTML card element with data for marketplace item
    */
   fillElement: function(data, element) {
-    var strike = Number(web3.fromWei(data[4] * 10000000000000000)).toFixed(2);
-    var ether = Number(web3.fromWei(data[5] * 10000000000000000)).toFixed(2);
+    var strike = Number(web3.fromWei(data[4] * 1000000000000000000)).toFixed(2);
+    var ether = Number(web3.fromWei(data[5] * 1000000000000000000)).toFixed(2);
     var isOwned = data[1] !== "0x0000000000000000000000000000000000000000";
     var nickname = data[6].length > 0 ? `"${data[6]}"` : "";
 
