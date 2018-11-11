@@ -3,7 +3,7 @@
 Written by: Weini Chen, Jeremy Longfellow, Mark McAvoy, Yiyao Zhou
 
 ---
-![alt text](./marketplace-screenshot.png)
+![alt text](./Marketplace-screenshot.png)
 
 ## Our project:
 
