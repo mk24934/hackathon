@@ -45,7 +45,7 @@ contract Market {
     require(id >= 0 && id <= items.length);
     require(msg.sender == items[id].owner);
 
-    balances[msg.sender] += items[id].price;
+    balances[msg.sender] += items[id].callprice;
     delete items[id].owner;
 
     return id;
