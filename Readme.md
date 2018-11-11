@@ -3,6 +3,7 @@
 Written by: Weini Chen, Jeremy Longfellow, Mark McAvoy, Yiyao Zhou
 
 ---
+![alt text](./marketplace-screenshot.png)
 
 ## Our project:
 
@@ -32,9 +33,7 @@ This runs a local Quorum node on your computer.  Then in a new terminal script r
 
 > npm start
 
-Congratulations!  It should look like this:
-
-![alt text](./marketplace-screenshot.png)
+Congratulations!  It should look like the picture above!
 
 ---
 Notes when things go wrong~:
