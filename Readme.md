@@ -34,10 +34,11 @@ This runs a local Quorum node on your computer.  Then in a new terminal script r
 
 Congratulations!  It should look like this:
 
+![alt text](./marketplace-screenshot.png)
 
 ---
 Notes when things go wrong~:
-If you get the error the blockchain isn't running, even though it clearly is, restart it by <ctl c> in terminal twice to abort it, the re-rrun the docker line.  If you still have issues try:
+If you get the error the blockchain isn't running, even though it clearly is, restart it by hitting \<ctl c\> in terminal twice to abort it, the re-run the docker line.  If you still have issues try:
 
 > docker container ls
  
