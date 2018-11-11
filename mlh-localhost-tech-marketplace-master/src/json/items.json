@@ -2,7 +2,7 @@
   {
     "name": "Blue Drone",
     "image": "images/items/drone-blue.jpg",
-    "strike": 0,
+    "strike": 5000000000000000000,
     "callprice": 2400000000000000000
   },
   {
